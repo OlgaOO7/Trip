@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  width: 250px;
+  background: #f8f8f9;
+}
+
+.searchBtn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #040403;
+
+  &:hover {
+    fill: #313125;
+  }
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #040403;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19.6px;
+}
