@@ -3,9 +3,9 @@ import { Trip } from "../../components/Trip/Trip";
 export const HomePage = () => {
   return (
     <main>
-      <p>
+      <h1>
         Weather <span>Forecast</span>
-      </p>
+      </h1>
       <Trip />
     </main>
   );

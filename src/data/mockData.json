@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "name": "Amsterdam",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/amsterdam_qzpeis.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ankara",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/ankara_qslwop.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Berlin",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/berlin_urgfj4.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Boston",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/boston_gxc4kw.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Chicago",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/chicago_iy0tz9.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Dnipro",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Dnipro_ga2o6o.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Dubai",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/dubai_bqjsxr.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Dublin",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/dublin_r1xkbt.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Edinburg",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/edinburg_rnb6bs.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Florence",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Florence_db9uoh.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Frankfurt",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Frankfurt_p7yr2x.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Geneva",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Geneva_u5vagm.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Glasgow",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Glasgow_ijdqoe.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Hamburg",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Hamburg_cr1dmb.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Helsinki",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Helsinki_g3hkmc.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Indore",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Indore_hu0mrz.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Istanbul",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Istanbul_g7zra5.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Ivano-Frankivsk",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Ivano-Frankivsk_zpqfj7.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Jakarta",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876419/Jakarta_yuidaf.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Kharkiv",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Kharkiv_aulau7.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Kingston",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Kingston_g2ewca.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Kyiv",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876420/Kyiv_bjiauv.jpg"
+  },
+  {
+    "id": 23,
+    "name": "London",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/London_ebamtg.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Lviv",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876421/Lviv_xgdujk.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Madrid",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/madrid_pqhc6z.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Mukachevo",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Mukachevo_m7vndx.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Munich",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Munich_dbhwmd.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Naples",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Naples_wiyz5f.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Odessa",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Odessa_c1kykx.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Ottawa",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Ottawa_uoecoe.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Paris",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876422/Paris_n9kiog.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Prague",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Prague_s1plgy.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Quercataro",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Quer%C3%A9taro_s2ffr3.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Rome",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Rome_ho450l.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Sydney",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Sydney_g8mzsg.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Tallinn",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Tallinn_nq3kfi.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Ternopil",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Ternopil_zrmlml.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Uzhhorod",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Uzhhorod_im9cbl.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Valencia",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876423/Valencia_mje5wu.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Vienna",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Vienna_d4zf1v.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Vinnytsia",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Vinnytsia_iott9k.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Xiamen",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Xiamen_ka7bcw.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Zaporizhzhia",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Zaporizhzhia_bes8de.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Zhytomyr",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Zhytomyr_ptzbeg.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Zurich",
+    "imageUrl": "https://res.cloudinary.com/dflab01qc/image/upload/v1708876424/Zurich_h90xug.jpg"
+  }
+]

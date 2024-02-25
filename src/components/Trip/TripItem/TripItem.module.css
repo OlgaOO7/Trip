@@ -1,0 +1,20 @@
+.photo {
+  width: 120px;
+  height: 120px;
+}
+
+
+
+.cityName {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19.6px;
+  color: #040403;
+}
+
+.date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #a6a6a6;
+}
