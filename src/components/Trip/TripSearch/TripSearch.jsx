@@ -1,6 +1,6 @@
-import css from "./TripSearch.module.css";
+import css from './TripSearch.module.css';
 
-import Sprite from "../../../images/sprite.svg";
+import Sprite from '../../../images/sprite.svg';
 
 export const TripSearch = () => {
   return (

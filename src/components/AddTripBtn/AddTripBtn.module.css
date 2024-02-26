@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  color: #040403;
+  background-color: #edf0f0;
+  border: none;
+
+  &:hover {
+    color: #313125;
+    background-color: #e3e7e7;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #040403;
+
+  &:hover {
+    fill: #313125;
+  }
+}

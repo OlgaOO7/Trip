@@ -1,11 +1,11 @@
-import { TripSearch } from "./TripSearch/TripSearch";
-import { TripList } from "./TripList/TripList";
+import { TripSearch } from './TripSearch/TripSearch';
+import { TripList } from './TripList/TripList';
 
 export const Trip = () => {
   return (
-    <section>
+    <div>
       <TripSearch />
       <TripList />
-    </section>
+    </div>
   );
 };

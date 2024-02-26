@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  margin-bottom: 34px;
 }
 
 .searchForm {
@@ -7,7 +8,7 @@
   align-items: center;
   padding: 10px 12px;
   width: 250px;
-  background: #f8f8f9;
+  background: #edf0f0;
 }
 
 .searchBtn {
