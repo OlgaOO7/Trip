@@ -1,5 +1,6 @@
 import { Container } from './components/Container/Container';
 import { Trip } from './components/Trip/Trip';
+import { TripDayForecast } from './components/TripDayForecast/TripDayForecast';
 
 import css from './App.module.css';
 
@@ -11,7 +12,8 @@ function App() {
           Weather <span>Forecast</span>
         </h1>
         <Trip />
-      </div >
+      </div>
+      <TripDayForecast />
     </Container>
   )
 };
