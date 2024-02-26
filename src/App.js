@@ -1,10 +1,18 @@
-import './App.css';
+import { Container } from './components/Container/Container';
+import { Trip } from './components/Trip/Trip';
+
+import css from './App.module.css';
 
 function App() {
   return (
-    <div>
-    </div>
-
+    <Container>
+      <div className={css.wrapper}>
+        <h1>
+          Weather <span>Forecast</span>
+        </h1>
+        <Trip />
+      </div >
+    </Container>
   )
 };
 
