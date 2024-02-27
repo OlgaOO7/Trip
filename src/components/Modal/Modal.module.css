@@ -1,0 +1,46 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.modal {
+  position: relative;
+  max-width: 800px;
+  max-height: 860px;
+  padding: 12px 24px;
+  background-color: #fff;
+  box-shadow: rgba(177, 177, 177, 0.2) 0px 6px 18px 0px;
+}
+
+.headerWrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-style: 1px solid rgba(177, 177, 177, 0.2);
+}
+
+.button {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  border: none;
+  background-color: transparent;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #040403;
+
+  &:hover {
+    fill: #313125;
+  }
+}
