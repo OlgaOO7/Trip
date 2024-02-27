@@ -13,19 +13,46 @@
 
 .modal {
   position: relative;
-  max-width: 800px;
-  max-height: 860px;
+  width: 400px;
+  height: 330px;
   padding: 12px 24px;
   background-color: #fff;
   box-shadow: rgba(177, 177, 177, 0.2) 0px 6px 18px 0px;
+}
+
+.modal::before {
+  position: absolute;
+  top: 14%;
+  left: 0;
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+
+.modal::after {
+  position: absolute;
+  top: 86%;
+  left: 0;
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
 }
 
 .headerWrapp {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom-style: 1px solid rgba(177, 177, 177, 0.2);
+  margin-bottom: 40px;
 }
+
+/* .headerWrapp::after {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+} */
 
 .button {
   position: absolute;
@@ -36,8 +63,8 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: #040403;
 
   &:hover {

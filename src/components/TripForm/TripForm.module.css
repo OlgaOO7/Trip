@@ -1,0 +1,41 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 2px;
+}
+
+.label::before {
+  content: '*';
+  color: #ff0000;
+}
+
+.formSelect {
+  width: 100%;
+}
+
+.cancelBtn {
+  margin-right: 6px;
+  padding: 8px 14px;
+  color: #040403;
+  background-color: transparent;
+  border: 2px solid rgba(177, 177, 177, 0.2);
+
+  &:hover {
+    /* color: #fff; */
+    background-color: rgba(177, 177, 177, 0.2);
+    ;
+  }
+}
+
+.saveBtn {
+  padding: 8px 14px;
+  color: #fff;
+  background-color: #1e90ff;
+  border: none;
+
+  &:hover {
+    background-color: #0483ff;
+    ;
+  }
+}

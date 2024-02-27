@@ -1,6 +1,8 @@
 import { useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
+import { TripForm } from '../TripForm/TripForm';
+
 import Sprite from '../../images/sprite.svg';
 
 import css from './Modal.module.css';
@@ -42,7 +44,7 @@ export const Modal = ({ closeModal }) => {
             </svg>
           </button>
         </div>
-        <div></div>
+        <TripForm />
       </div>
     </div>,
     document.querySelector('#modal-root')
