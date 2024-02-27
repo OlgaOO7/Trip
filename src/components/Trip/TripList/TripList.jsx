@@ -10,7 +10,7 @@ export const TripList = () => {
   console.log(trips);
 
   const cities = citiesData || [];
-  console.log('cities:', cities);
+
   return (
     <ul>
       {trips.map(city => (
