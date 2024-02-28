@@ -8,3 +8,35 @@
   background-color: #16134f;
   color: #fff;
 }
+
+.dayWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.weatherWrapper {
+  display: flex;
+  gap: 8px;
+  font-size: 50px;
+}
+
+.weatherIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.temp {
+  font-size: 80px;
+}
+
+.cityName {
+  font-size: 32px;
+  font-weight: 400;
+}
