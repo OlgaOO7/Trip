@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 
 const currentDate = new Date();
 const start = new Date(currentDate.setDate(currentDate.getDate() + 5));
+console.log(start.getTime());
 const end = new Date(currentDate.setDate(currentDate.getDate() + 10));
 
 export const tripByDefault = {

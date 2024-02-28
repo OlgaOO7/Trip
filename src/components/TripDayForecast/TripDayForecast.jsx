@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import { CountDownTimer } from '../CountDownTimer/CountDownTimer';
 import { fetchDayForecast } from '../../api/api';
 import { getDayofWeek } from '../../services/getDayOfWeek';
 
@@ -40,6 +42,7 @@ export const TripDayForecast = () => {
           <p className={css.cityName}>{cityData.address}</p>
         </div>
       )}
+      <CountDownTimer />
     </div>
   );
 };
