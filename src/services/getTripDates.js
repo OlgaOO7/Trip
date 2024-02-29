@@ -11,8 +11,8 @@ export const getTripDates = (now, fifteenDays) => {
   ) {
     optionDate.push(new Date(date));
   }
-  console.log('optionDate', optionDate);
-  console.log('Start Date:', startDate);
-  console.log('End Date:', endDate);
+  // console.log('optionDate', optionDate);
+  // console.log('Start Date:', startDate);
+  // console.log('End Date:', endDate);
   return optionDate;
 };

@@ -3,9 +3,11 @@ export const formatDate = (tripDate) => {
     return '';
   }
 
-  const day = tripDate.getDate().toString().padStart(2, '0');
-  const month = (tripDate.getMonth() + 1).toString().padStart(2, '0');
-  const year = (tripDate.getFullYear().toString());
+  const dateObj = new Date(tripDate);
+
+  const day = dateObj.getDate().toString().padStart(2, '0');
+  const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
+  const year = (dateObj.getFullYear().toString());
   const formattedDate = `${day}.${month}.${year}`;
 
   return formattedDate;

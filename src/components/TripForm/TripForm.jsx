@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
 
 import citiesData from '../../data/mockData.json';
 import { getTripDates } from '../../services/getTripDates';
 
 import css from './TripForm.module.css';
 
-export const TripForm = ({ closeModal }) => {
+export const TripForm = ({ closeModal, addNewTrip }) => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
@@ -17,6 +18,7 @@ export const TripForm = ({ closeModal }) => {
   const handleCityChange = e => {
     const citySelected = e.target.value;
     const foundCity = citiesData.find(city => city.name === citySelected);
+    console.log('foundCity', foundCity);
     if (foundCity) {
       setSelectedCity(foundCity);
       setMessage(false);
@@ -42,6 +44,14 @@ export const TripForm = ({ closeModal }) => {
       return;
     }
     setMessage(false);
+    const newTrip = {
+      _id: nanoid(),
+      name: selectedCity?.name,
+      imageUrl: selectedCity?.imageUrl,
+      start: startDate,
+      end: endDate,
+    };
+    addNewTrip(newTrip);
     closeModal();
   };
 
@@ -58,7 +68,7 @@ export const TripForm = ({ closeModal }) => {
         <select
           name="city"
           id="selectedCity"
-          value={selectedCity}
+          defaultValue=""
           onChange={handleCityChange}
           className={css.formSelect}
         >
