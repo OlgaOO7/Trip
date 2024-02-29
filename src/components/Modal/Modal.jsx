@@ -44,7 +44,7 @@ export const Modal = ({ closeModal }) => {
             </svg>
           </button>
         </div>
-        <TripForm />
+        <TripForm closeModal={closeModal} />
       </div>
     </div>,
     document.querySelector('#modal-root')

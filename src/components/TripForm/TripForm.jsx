@@ -1,16 +1,65 @@
+import { useState } from 'react';
+
 import citiesData from '../../data/mockData.json';
+import { getTripDates } from '../../services/getTripDates';
 
 import css from './TripForm.module.css';
 
-export const TripForm = () => {
+export const TripForm = ({ closeModal }) => {
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
+  const [message, setMessage] = useState(false);
+
+  const now = new Date();
+  const fifteenDays = new Date().setDate(now.getDate() + 15);
+
+  const handleCityChange = e => {
+    const citySelected = e.target.value;
+    const foundCity = citiesData.find(city => city.name === citySelected);
+    if (foundCity) {
+      setSelectedCity(foundCity);
+      setMessage(false);
+    }
+  };
+
+  const handleStartDateChange = e => {
+    const start = e.target.value;
+    setStartDate(start);
+    setMessage(false);
+  };
+
+  const handleEndDateChange = e => {
+    const end = e.target.value;
+    setEndDate(end);
+    setMessage(false);
+  };
+
+  const handleSubmiTrip = e => {
+    e.preventDefault();
+    if (!selectedCity || !endDate || !startDate || endDate < startDate) {
+      setMessage(true);
+      return;
+    }
+    setMessage(false);
+    closeModal();
+  };
+
+  const handleResetTrip = () => {
+    setSelectedCity('');
+    setStartDate('');
+    setEndDate('');
+  };
+
   return (
     <div className={css.formWrapper}>
-      <form>
+      <form onSubmit={handleSubmiTrip}>
         <label className={css.label}>City</label>
         <select
           name="city"
-          id="city-select"
-          defaultValue=""
+          id="selectedCity"
+          value={selectedCity}
+          onChange={handleCityChange}
           className={css.formSelect}
         >
           <option value="" disabled hidden>
@@ -26,27 +75,58 @@ export const TripForm = () => {
         <label className={css.label}>Start date</label>
         <select
           name="start-date"
-          id="sart-date-select"
-          defaultValue=""
+          id="startDate"
+          value={startDate}
+          onChange={handleStartDateChange}
           className={css.formSelect}
         >
           <option value="" disabled hidden>
             Select date
           </option>
+          {getTripDates(now, fifteenDays).map(date => (
+            <option
+              key={date.getTime()}
+              value={date.toISOString().split('T')[0]}
+            >
+              {date.toLocaleDateString()}
+            </option>
+          ))}
         </select>
 
         <label className={css.label}>End date</label>
         <select
           name="end-date"
-          id="end-date-select"
-          defaultValue=""
+          id="endDate"
+          value={endDate}
+          onChange={handleEndDateChange}
           className={css.formSelect}
         >
           <option value="" disabled hidden>
             Select date
           </option>
+          {getTripDates(now, fifteenDays).map(date => (
+            <option
+              key={date.getTime()}
+              value={date.toISOString().split('T')[0]}
+              disabled={date < new Date(startDate)}
+            >
+              {date.toLocaleDateString()}
+            </option>
+          ))}
         </select>
-        <button type="reset" className={css.cancelBtn}>
+
+        {message && (
+          <p>
+            Please check if city, start date and end date of trip are correctly
+            chosen
+          </p>
+        )}
+
+        <button
+          type="button"
+          className={css.cancelBtn}
+          onClick={handleResetTrip}
+        >
           Cancel
         </button>
         <button type="submit" className={css.saveBtn}>
