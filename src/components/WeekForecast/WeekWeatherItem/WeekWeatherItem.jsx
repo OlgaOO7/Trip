@@ -1,14 +1,20 @@
 import { getDayofWeek } from '../../../services/getDayOfWeek';
 
-export const WeekWeatherItem = () => {
+import css from './WeekWeatherItem.module.css';
+
+export const WeekWeatherItem = ({ day }) => {
   return (
-    <div>
-      <p>Day of week</p>
-      <img src="" alt="" />
+    <div className={css.itemWrapper}>
+      <p>{getDayofWeek(day.datetime)}</p>
+      <img
+        src={require(`../../../images/weather/${day.icon}.svg`)}
+        alt={day.icon}
+        className={css.weatherIcon}
+      />
       <p>
-        {}
-        <sup>°C</sup>/{}
-        <sup>°C</sup>
+        {Math.floor(day.tempmax)}
+        <sup>°</sup>/{Math.floor(day.tempmin)}
+        <sup>°</sup>
       </p>
     </div>
   );

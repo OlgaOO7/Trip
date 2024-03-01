@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import css from './CountDownTimer.module.css';
 
-export const CountDownTimer = () => {
+export const CountDownTimer = ({ selectedTrip }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -10,12 +10,12 @@ export const CountDownTimer = () => {
     seconds: 0,
   });
 
-  const now = new Date();
-  const currentDate = new Date();
-  const start = new Date(currentDate.setDate(currentDate.getDate() + 5));
-  const targetDate = start.getTime();
+  // const currentDate = new Date();
+  const startDay = new Date(selectedTrip.start);
+  const targetDate = startDay.getTime();
 
   const calculateTimeLeft = () => {
+    const now = new Date();
     const difference = targetDate - now;
     let timeLeftTo = {};
 

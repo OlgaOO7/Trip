@@ -6,7 +6,7 @@ import { getTripDates } from '../../services/getTripDates';
 
 import css from './TripForm.module.css';
 
-export const TripForm = ({ closeModal, addNewTrip }) => {
+export const TripForm = ({ closeModal, addNewTrip, trips }) => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
@@ -20,7 +20,7 @@ export const TripForm = ({ closeModal, addNewTrip }) => {
     const foundCity = citiesData.find(city => city.name === citySelected);
     console.log('foundCity', foundCity);
     if (foundCity) {
-      setSelectedCity(foundCity);
+      setSelectedCity(citySelected);
       setMessage(false);
     }
   };
@@ -44,14 +44,17 @@ export const TripForm = ({ closeModal, addNewTrip }) => {
       return;
     }
     setMessage(false);
+    const cityDetails = citiesData.find(city => city.name === selectedCity);
     const newTrip = {
       _id: nanoid(),
-      name: selectedCity?.name,
-      imageUrl: selectedCity?.imageUrl,
+      name: cityDetails?.name,
+      imageUrl: cityDetails?.imageUrl,
       start: startDate,
       end: endDate,
     };
     addNewTrip(newTrip);
+    const updatedTrips = [...trips, newTrip];
+    localStorage.setItem('trips', JSON.stringify(updatedTrips));
     closeModal();
   };
 
@@ -68,7 +71,7 @@ export const TripForm = ({ closeModal, addNewTrip }) => {
         <select
           name="city"
           id="selectedCity"
-          defaultValue=""
+          value={selectedCity}
           onChange={handleCityChange}
           className={css.formSelect}
         >

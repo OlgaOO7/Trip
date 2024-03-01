@@ -1,24 +1,27 @@
 import axios from "axios";
 
+import { formatDate } from '../services/formatDate';
+
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
-export const fetchForecastByTripDate = async ({ city, date1, date2 }) => {
+export const fetchTripDateForecast = async (selectedTrip) => {
+  const { name, start, end } = selectedTrip;
+
   try {
-    return await axios.get(`${city}/${date1}/${date2}?unitGroup=metric&include=days&key=${API_KEY}&contentType=json`)
+    const res = await axios.get(`${name}/${formatDate(start, 'api')}/${formatDate(end, 'api')}?unitGroup=metric&include=days&iconSet=icons2&key=${API_KEY}&contentType=json`);
+    return res.data;
   } catch (e) {
     console.error('Error fetching weather data by trip date:', e);
   }
 };
 
-export const fetchDayForecast = async (city) => {
+export const fetchDayForecast = async (selectedTrip) => {
+  const { name } = selectedTrip;
   try {
-    const res = await axios.get(`${city}/today?unitGroup=metric&include=days&iconSet=icons2&key=${API_KEY}&contentType=json`);
+    const res = await axios.get(`${name}/today?unitGroup=metric&include=days&iconSet=icons2&key=${API_KEY}&contentType=json`);
     return res.data;
   } catch (e) {
     console.error('Error fetching day weather:', e);
   }
 };
-
-
-console.log(await fetchDayForecast('London'));

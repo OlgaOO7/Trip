@@ -7,7 +7,7 @@ import Sprite from '../../images/sprite.svg';
 
 import css from './Modal.module.css';
 
-export const Modal = ({ closeModal, addNewTrip }) => {
+export const Modal = ({ closeModal, addNewTrip, trips }) => {
   const handleKeyDown = useCallback(
     e => {
       if (e.code === 'Escape') {
@@ -44,7 +44,11 @@ export const Modal = ({ closeModal, addNewTrip }) => {
             </svg>
           </button>
         </div>
-        <TripForm closeModal={closeModal} addNewTrip={addNewTrip} />
+        <TripForm
+          closeModal={closeModal}
+          addNewTrip={addNewTrip}
+          trips={trips}
+        />
       </div>
     </div>,
     document.querySelector('#modal-root')

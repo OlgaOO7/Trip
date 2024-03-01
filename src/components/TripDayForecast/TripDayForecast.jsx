@@ -1,48 +1,31 @@
-import { useState, useEffect } from 'react';
-
 import { CountDownTimer } from '../CountDownTimer/CountDownTimer';
-import { fetchDayForecast } from '../../api/api';
 import { getDayofWeek } from '../../services/getDayOfWeek';
 
 import css from './TripDayForecast.module.css';
 
-export const TripDayForecast = () => {
-  const [city, setCity] = useState('Kyiv');
-  const [cityData, setCityData] = useState({});
-
-  useEffect(() => {
-    const getForecast = async city => {
-      try {
-        const weatherDayData = await fetchDayForecast(city);
-        setCityData(weatherDayData);
-      } catch (e) {
-        console.error('Error in fetching day forecast', e);
-      }
-    };
-    getForecast(city);
-  }, [city]);
-
+export const TripDayForecast = ({ tripDayForecast, selectedTrip }) => {
   return (
     <div className={css.container}>
-      {cityData.days && cityData.days.length > 0 && (
+      {tripDayForecast.days && tripDayForecast.days.length > 0 && (
         <div className={css.dayWrapper}>
           <h3 className={css.day}>
-            {getDayofWeek(cityData.days[0].datetimeEpoch)}
+            {getDayofWeek(tripDayForecast.days[0].datetimeEpoch)}
           </h3>
           <div className={css.weatherWrapper}>
             <img
-              src={require(`../../images/weather/${cityData.days[0].icon}.svg`)}
-              alt={cityData.days[0].icon}
+              src={require(`../../images/weather/${tripDayForecast.days[0].icon}.svg`)}
+              alt={tripDayForecast.days[0].icon}
+              className={css.weatherIcon}
             />
             <p className={css.temp}>
-              {Math.round(cityData.days[0].temp)}
+              {Math.round(tripDayForecast.days[0].temp)}
               <sup>°C</sup>
             </p>
           </div>
-          <p className={css.cityName}>{cityData.address}</p>
+          <p className={css.cityName}>{tripDayForecast.address}</p>
         </div>
       )}
-      <CountDownTimer />
+      <CountDownTimer selectedTrip={selectedTrip} />
     </div>
   );
 };

@@ -4,19 +4,23 @@ import { TripItem } from '../TripItem/TripItem';
 
 import css from './TripList.module.css';
 
-export const TripList = () => {
-  // const [trips, setTrips] = useState([tripByDefault]);
-  // console.log(trips);
-
-  const tripList = JSON.parse(localStorage.getItem('trips')) || [];
+export const TripList = ({ onSelectedTrip, trips }) => {
+  // const tripList = JSON.parse(localStorage.getItem('trips')) || [];
 
   return (
-    <ul className={css.tripWrapper}>
-      {tripList.map(city => (
-        <li key={city._id}>
-          <TripItem city={city} />
-        </li>
-      ))}
-    </ul>
+    <div className={css.tripWrapper}>
+      <ul className={css.tripList}>
+        {trips.map(city => (
+          <li
+            key={city._id}
+            onClick={() => {
+              onSelectedTrip(city);
+            }}
+          >
+            <TripItem city={city} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };

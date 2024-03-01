@@ -6,7 +6,7 @@ import Sprite from '../../images/sprite.svg';
 
 import css from './AddTripBtn.module.css';
 
-export const AddTripBtn = ({ addNewTrip }) => {
+export const AddTripBtn = ({ addNewTrip, trips }) => {
   const [isShowModal, setIsShowModal] = useState(false);
 
   const toggleModal = () => {
@@ -22,7 +22,7 @@ export const AddTripBtn = ({ addNewTrip }) => {
         Add trip
       </button>
       {isShowModal && (
-        <Modal closeModal={toggleModal} addNewTrip={addNewTrip} />
+        <Modal closeModal={toggleModal} addNewTrip={addNewTrip} trips={trips} />
       )}
     </div>
   );

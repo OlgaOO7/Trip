@@ -14,6 +14,7 @@ export const TripSearch = () => {
         <input
           type="text"
           name="search"
+          // value={search}
           autoComplete="off"
           autoFocus
           placeholder="Search you trip"

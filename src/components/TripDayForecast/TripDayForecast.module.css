@@ -23,13 +23,13 @@
 
 .weatherWrapper {
   display: flex;
+  justify-content: space-around;
   gap: 8px;
   font-size: 50px;
 }
 
 .weatherIcon {
-  width: 24px;
-  height: 24px;
+  width: 60px;
 }
 
 .temp {
