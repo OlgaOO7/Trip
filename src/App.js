@@ -117,7 +117,7 @@ function App() {
           </div>
 
         </div>
-        <WeekForecast tripDataForecast={tripDataForecast.days} />
+        {/* <WeekForecast tripDataForecast={tripDataForecast.days} /> */}
       </div>
       <TripDayForecast tripDayForecast={tripDayForecast} selectedTrip={selectedTrip} />
     </Container>
