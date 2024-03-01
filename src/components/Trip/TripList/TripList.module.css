@@ -1,10 +1,42 @@
 .tripWrapper {
+  position: relative;
   overflow: hidden;
   width: 660px;
+}
+
+.btnWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.scrollBtn {
+  background-color: rgba(128, 128, 128, 0.3);
+  border: none;
+  border-radius: 50%;
+}
+
+.scrollIcon {
+  width: 24px;
+  height: 24px;
+  fill: #313125;
+
+  &:hover {
+    fill: #040403;
+  }
 }
 
 .tripList {
   display: flex;
   gap: 20px;
+}
+
+.tripListContainer {
+  display: flex;
   overflow-x: scroll;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+
 }

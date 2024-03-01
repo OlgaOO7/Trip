@@ -1,3 +1,7 @@
+.addBtnWrapper {
+  padding: 10px;
+}
+
 .button {
   display: flex;
   flex-direction: column;

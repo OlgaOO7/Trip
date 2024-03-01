@@ -14,7 +14,7 @@ export const AddTripBtn = ({ addNewTrip, trips }) => {
   };
 
   return (
-    <div>
+    <div className={css.addBtnWrapper}>
       <button type="button" className={css.button} onClick={toggleModal}>
         <svg className={css.icon}>
           <use href={`${Sprite}#icon-plus`} />
