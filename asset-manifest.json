@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/trip/static/css/main.a69edfd1.css",
-    "main.js": "/trip/static/js/main.b08bf373.js",
+    "main.js": "/trip/static/js/main.81a0e96c.js",
     "static/media/snow-showers-night.svg": "/trip/static/media/snow-showers-night.91f635208aa0c51ba9cd.svg",
     "static/media/snow-showers-day.svg": "/trip/static/media/snow-showers-day.4b481263984dc78c37aa.svg",
     "static/media/thunder-showers-night.svg": "/trip/static/media/thunder-showers-night.935adff480ff6e1dbcca.svg",
@@ -27,10 +27,10 @@
     "index.html": "/trip/index.html",
     "static/media/fog.svg": "/trip/static/media/fog.5465c93e38463cdf13b3.svg",
     "main.a69edfd1.css.map": "/trip/static/css/main.a69edfd1.css.map",
-    "main.b08bf373.js.map": "/trip/static/js/main.b08bf373.js.map"
+    "main.81a0e96c.js.map": "/trip/static/js/main.81a0e96c.js.map"
   },
   "entrypoints": [
     "static/css/main.a69edfd1.css",
-    "static/js/main.b08bf373.js"
+    "static/js/main.81a0e96c.js"
   ]
 }
