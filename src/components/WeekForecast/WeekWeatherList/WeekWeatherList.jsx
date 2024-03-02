@@ -3,9 +3,7 @@ import { WeekWeatherItem } from '../WeekWeatherItem/WeekWeatherItem';
 import css from './WeekWeatherList.module.css';
 
 export const WeekWeatherList = ({ tripDataForecast }) => {
-  // const days = tripDataForecast ? tripDataForecast : [];
-  const days =
-    tripDataForecast && tripDataForecast.days ? tripDataForecast.days : [];
+  const days = tripDataForecast ? tripDataForecast : [];
 
   return (
     <ul className={css.weatherList}>

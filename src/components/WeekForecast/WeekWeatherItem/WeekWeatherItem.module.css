@@ -4,8 +4,15 @@
   align-items: center;
 }
 
+.day {
+  font-size: 12px;
+}
 
 .weatherIcon {
   width: 24px;
   height: 24px;
+}
+
+.temperature {
+  font-size: 12px;
 }

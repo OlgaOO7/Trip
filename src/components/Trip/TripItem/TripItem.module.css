@@ -2,6 +2,11 @@
   display: inline-block;
   width: 200px;
   border: 1px solid #c8cfcf;
+
+  &:hover,
+  focus {
+    border-color: #27228d;
+  }
 }
 
 .photo {

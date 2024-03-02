@@ -3,18 +3,15 @@ import { getDayofWeek } from '../../../services/getDayOfWeek';
 import css from './WeekWeatherItem.module.css';
 
 export const WeekWeatherItem = ({ day }) => {
-  // if (!day) {
-  //   return null;
-  // }
   return (
     <div className={css.itemWrapper}>
-      <p>{getDayofWeek(day.datetime)}</p>
+      <p className={css.day}>{getDayofWeek(day.datetime)}</p>
       <img
         src={require(`../../../images/weather/${day.icon}.svg`)}
         alt={day.icon}
         className={css.weatherIcon}
       />
-      <p>
+      <p className={css.temperature}>
         {Math.floor(day.tempmax)}
         <sup>°</sup>/{Math.floor(day.tempmin)}
         <sup>°</sup>
