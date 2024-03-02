@@ -3,6 +3,9 @@ import { getDayofWeek } from '../../../services/getDayOfWeek';
 import css from './WeekWeatherItem.module.css';
 
 export const WeekWeatherItem = ({ day }) => {
+  // if (!day) {
+  //   return null;
+  // }
   return (
     <div className={css.itemWrapper}>
       <p>{getDayofWeek(day.datetime)}</p>

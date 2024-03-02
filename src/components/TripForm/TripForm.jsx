@@ -129,22 +129,24 @@ export const TripForm = ({ closeModal, addNewTrip, trips }) => {
         </select>
 
         {message && (
-          <p>
+          <p className={css.notification}>
             Please check if city, start date and end date of trip are correctly
             chosen
           </p>
         )}
 
-        <button
-          type="button"
-          className={css.cancelBtn}
-          onClick={handleResetTrip}
-        >
-          Cancel
-        </button>
-        <button type="submit" className={css.saveBtn}>
-          Save
-        </button>
+        <div className={css.btnWrapper}>
+          <button
+            type="button"
+            className={css.cancelBtn}
+            onClick={handleResetTrip}
+          >
+            Cancel
+          </button>
+          <button type="submit" className={css.saveBtn}>
+            Save
+          </button>
+        </div>
       </form>
     </div>
   );

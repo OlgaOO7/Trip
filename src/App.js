@@ -24,6 +24,8 @@ function App() {
 
   const scrollContainerRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isPrevButtonVisible, setIsPrevButtonVisible] = useState(false);
+  const [isNextButtonVisible, setIsNextButtonVisible] = useState(true);
 
   const addNewTrip = (newTrip) => {
     setTrips([...trips, newTrip]);
@@ -31,7 +33,7 @@ function App() {
 
   const handleScroll = direction => {
     const container = scrollContainerRef.current;
-    const scrollStep = 450;
+    const scrollStep = 225;
 
     if (container) {
       if (direction === 'next') {
@@ -46,9 +48,16 @@ function App() {
   useEffect(() => {
     const container = scrollContainerRef.current;
 
+    setIsPrevButtonVisible(false);
+    setIsNextButtonVisible(container && container.scrollWidth > container.clientWidth);
+
     const handleScrollUpdate = () => {
       if (container) {
         setScrollPosition(container.scrollLeft);
+        setIsPrevButtonVisible(container.scrollLeft > 0);
+        setIsNextButtonVisible(
+          container.scrollLeft < container.scrollWidth - container.clientWidth
+        );
       }
     };
 
@@ -61,7 +70,7 @@ function App() {
         container.removeEventListener('scroll', handleScrollUpdate);
       }
     };
-  }, [scrollContainerRef]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('trips', JSON.stringify(trips));
@@ -112,14 +121,21 @@ function App() {
 
           <TripSearch search={search} onSearch={handleSearch} />
           <div className={css.tripListWrapper}>
-            <TripList onSelectedTrip={handleSelectedTrip} trips={visibleTrips} handleScroll={handleScroll} scrollPosition={scrollPosition} scrollContainerRef={scrollContainerRef} />
+            <TripList onSelectedTrip={handleSelectedTrip}
+              trips={visibleTrips}
+              handleScroll={handleScroll}
+              scrollPosition={scrollPosition}
+              scrollContainerRef={scrollContainerRef}
+              isPrevBtnVissible={isPrevButtonVisible}
+              isNextBtnVisible={isNextButtonVisible} />
             <AddTripBtn addNewTrip={addNewTrip} trips={visibleTrips} />
           </div>
 
         </div>
-        {/* <WeekForecast tripDataForecast={tripDataForecast.days} /> */}
+        {tripDataForecast && <WeekForecast tripDataForecast={tripDataForecast.days} />}
+
       </div>
-      <TripDayForecast tripDayForecast={tripDayForecast} selectedTrip={selectedTrip} />
+      {tripDayForecast && <TripDayForecast tripDayForecast={tripDayForecast} selectedTrip={selectedTrip} />}
     </Container>
   )
 };

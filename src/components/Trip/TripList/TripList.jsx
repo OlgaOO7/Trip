@@ -1,5 +1,3 @@
-// import { useState, useRef, useEffect } from 'react';
-
 import { TripItem } from '../TripItem/TripItem';
 import Sprite from '../../../images/sprite.svg';
 
@@ -11,6 +9,8 @@ export const TripList = ({
   handleScroll,
   scrollPosition,
   scrollContainerRef,
+  isPrevBtnVissible,
+  isNextBtnVisible,
 }) => {
   const sortTripsByStartDate = trips => {
     return trips.slice().sort((a, b) => new Date(a.start) - new Date(b.start));
@@ -24,13 +24,17 @@ export const TripList = ({
         <button
           onClick={() => handleScroll('prev')}
           className={css.scrollBtn}
-          disabled={scrollPosition === 0}
+          disabled={!isPrevBtnVissible}
         >
           <svg className={css.scrollIcon}>
             <use href={`${Sprite}#icon-arrow-left`} />
           </svg>
         </button>
-        <button onClick={() => handleScroll('next')} className={css.scrollBtn}>
+        <button
+          onClick={() => handleScroll('next')}
+          className={css.scrollBtn}
+          disabled={!isNextBtnVisible}
+        >
           <svg className={css.scrollIcon}>
             <use href={`${Sprite}#icon-arrow-right`} />
           </svg>

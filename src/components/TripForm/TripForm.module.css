@@ -12,6 +12,19 @@
 
 .formSelect {
   width: 100%;
+  margin-bottom: 14px;
+  padding: 10px;
+}
+
+.notification {
+  font-size: 10px;
+  color: red;
+}
+
+.btnWrapper {
+  position: absolute;
+  bottom: 8px;
+  right: 8px
 }
 
 .cancelBtn {
@@ -22,7 +35,6 @@
   border: 2px solid rgba(177, 177, 177, 0.2);
 
   &:hover {
-    /* color: #fff; */
     background-color: rgba(177, 177, 177, 0.2);
     ;
   }

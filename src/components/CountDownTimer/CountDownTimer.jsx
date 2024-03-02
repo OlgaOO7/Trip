@@ -45,23 +45,23 @@ export const CountDownTimer = ({ selectedTrip }) => {
   return (
     <div className={css.wrapper}>
       <div className={css.timerWrapper}>
-        <p>{timeLeft.days}</p>
-        <p>days</p>
+        <p className={css.dateNumber}>{timeLeft.days}</p>
+        <p className={css.dateText}>days</p>
       </div>
 
-      <div>
-        <p>{timeLeft.hours}</p>
-        <p>hours</p>
+      <div className={css.timerWrapper}>
+        <p className={css.dateNumber}>{timeLeft.hours}</p>
+        <p className={css.dateText}>hours</p>
       </div>
 
-      <div>
-        <p>{timeLeft.minutes}</p>
-        <p>minutes</p>
+      <div className={css.timerWrapper}>
+        <p className={css.dateNumber}>{timeLeft.minutes}</p>
+        <p className={css.dateText}>minutes</p>
       </div>
 
-      <div>
-        <p>{timeLeft.seconds}</p>
-        <p>seconds</p>
+      <div className={css.timerWrapper}>
+        <p className={css.dateNumber}>{timeLeft.seconds}</p>
+        <p className={css.dateText}>seconds</p>
       </div>
     </div>
   );

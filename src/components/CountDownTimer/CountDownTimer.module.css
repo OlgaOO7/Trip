@@ -1,8 +1,22 @@
 .wrapper {
   display: flex;
-  box-sizing: content-box;
+  gap: 30px;
+  /* box-sizing: content-box; */
 }
 
 .timerWrapper {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dateNumber {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.dateText {
+
+  font-size: 12px;
+  text-transform: uppercase;
 }

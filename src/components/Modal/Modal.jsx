@@ -37,7 +37,7 @@ export const Modal = ({ closeModal, addNewTrip, trips }) => {
     <div onClick={handleBackdropClick} className={css.backdrop}>
       <div className={css.modal}>
         <div className={css.headerWrapp}>
-          <p>Create trip</p>
+          <h3>Create trip</h3>
           <button type="button" onClick={closeModal} className={css.button}>
             <svg className={css.icon}>
               <use href={`${Sprite}#icon-cross`} />

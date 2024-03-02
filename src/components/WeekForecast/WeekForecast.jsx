@@ -1,7 +1,10 @@
 import { WeekWeatherList } from './WeekWeatherList/WeekWeatherList';
 
 export const WeekForecast = ({ tripDataForecast }) => {
-  const days = tripDataForecast.length;
+  if (!tripDataForecast) {
+    return null;
+  }
+  const days = tripDataForecast.length || [];
   const pluralSuffix = days === 1 ? 'day' : 'days';
 
   return (
